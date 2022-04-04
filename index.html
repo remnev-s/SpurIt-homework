@@ -8,11 +8,138 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
     <link rel="stylesheet" href="css/index.css" />
-    <link rel="stylesheet" href="./fonts/fonts.css" />
     <title>Susparsa</title>
   </head>
   <body class="root">
-    <div class="page"></div>
+    <div class="page">
+      <header class="header">
+        <div class="header__nav wrapper">
+          <nav class="menu">
+            <ul class="menu-list nav-list">
+              <li class="menu__list-item">
+                <a href="#" class="nav-link menu__list-link">Women</a>
+              </li>
+              <li class="menu__list-item">
+                <a href="#" class="nav-link menu__list-link">Men</a>
+              </li>
+              <li class="menu__list-item">
+                <a href="#" class="nav-link menu__list-link">Kids</a>
+              </li>
+              <li class="menu__list-item">
+                <a href="#" class="nav-link menu__list-link">Company</a>
+              </li>
+            </ul>
+          </nav>
+
+          <a href="#" class="header__logo">
+            <img
+              src="./img/main-logo.svg"
+              alt="logo Susparsa"
+              class="header__logo-img"
+            />
+          </a>
+
+          <nav class="account-nav">
+            <ul class="account-nav__list nav-list">
+              <li class="account-nav__list-item">
+                <a href="#" class="nav-link account-nav__list-link">Account</a>
+              </li>
+              <li class="account-nav__list-item">
+                <a href="#" class="nav-link account-nav__list-link">Search</a>
+              </li>
+              <li class="account-nav__list-item">
+                <a href="#" class="nav-link account-nav__listt-link"
+                  >Cart (0)</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <div class="main">
+        <ul class="breadcrumb wrapper">
+          <li class="breadcrumb__item">
+            <a class="breadcrumb__item-link" href="#">Home</a>
+          </li>
+          <li class="breadcrumb__item">
+            <a class="breadcrumb__item-link" href="#">Women</a>
+          </li>
+          <li class="breadcrumb__item">
+            <a class="breadcrumb__item-link" href="#">White unisex t-shirt</a>
+          </li>
+        </ul>
+      </div>
+
+      <section class="product wrapper">
+        <div class="product__images">
+          <img src="./img/main-pic.jpg" alt="women t-shirt" />
+        </div>
+
+        <div class="product__info">
+          <h1 class="product__info-title">White unisex t-shirt</h1>
+          <h2 class="product__info-subtitle">Chf 40</h2>
+          <div class="product__info-tax">Tax included</div>
+
+          <form class="product__option">
+            <p class="product__option-text">Size</p>
+            <ul class="product__option-size">
+              <li class="product__option-size_inner">xs</li>
+              <li
+                class="
+                  product__option-size_inner product__option-size_inner_active
+                "
+              >
+                s
+              </li>
+              <li class="product__option-size_inner">m</li>
+              <li class="product__option-size_inner">l</li>
+              <li class="product__option-size_inner">xl</li>
+              <li
+                class="
+                  product__option-size_inner
+                  product__option-size_inner_unavailable
+                "
+              >
+                2xl
+              </li>
+            </ul>
+          </form>
+        </div>
+
+        <div class="product__about">
+          <button class="product__about-button">
+            <span class="product__about-text">Sizing & Fit!</span>
+            <img src="./img/+.svg" alt="" />
+          </button>
+          <div class="product__about-panel">
+            <p class="product__about-text">
+              Olga is 175cm, she is wearing a size S.
+            </p>
+          </div>
+
+          <button class="product__about-button">
+            <span class="product__about-text">Composition & Care</span>
+            <img src="./img/+.svg" alt="" />
+          </button>
+          <div class="product__about-panel">
+            <p class="product__about-text">
+              Olga is 175cm, she is wearing a size S.
+            </p>
+          </div>
+
+          <button class="product__about-button">
+            <span class="product__about-text">Delivery & Returns</span>
+            <img src="./img/+.svg" alt="" />
+          </button>
+          <div class="product__about-panel">
+            <p class="product__about-text">
+              Olga is 175cm, she is wearing a size S.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
     <script src="./js/index.js"></script>
   </body>
 </html>

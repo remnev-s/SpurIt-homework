@@ -15,7 +15,7 @@
       <header class="header">
         <div class="header__nav wrapper">
           <nav class="menu">
-            <ul class="menu-list nav-list">
+            <ul class="menu-list nav-list" role="list">
               <li class="menu__list-item">
                 <a href="#" class="nav-link menu__list-link">Women</a>
               </li>
@@ -40,7 +40,7 @@
           </a>
 
           <nav class="account-nav">
-            <ul class="account-nav__list nav-list">
+            <ul class="account-nav__list nav-list" role="list">
               <li class="account-nav__list-item">
                 <a href="#" class="nav-link account-nav__list-link">Account</a>
               </li>
@@ -58,7 +58,7 @@
       </header>
 
       <div class="main">
-        <ul class="breadcrumb wrapper">
+        <ul class="breadcrumb wrapper" role="list">
           <li class="breadcrumb__item">
             <a class="breadcrumb__item-link" href="#">Home</a>
           </li>
@@ -73,7 +73,11 @@
 
       <section class="product wrapper">
         <div class="product__images">
-          <img src="./img/main-pic.jpg" alt="women t-shirt" />
+          <img
+            class="product__images-main"
+            src="./img/main-pic.jpg"
+            alt="women t-shirt"
+          />
         </div>
 
         <div class="product__info">
@@ -82,29 +86,212 @@
           <div class="product__info-tax">Tax included</div>
 
           <form class="product__option">
-            <p class="product__option-text">Size</p>
-            <ul class="product__option-size">
-              <li class="product__option-size_inner">xs</li>
-              <li
-                class="
-                  product__option-size_inner product__option-size_inner_active
-                "
-              >
-                s
-              </li>
-              <li class="product__option-size_inner">m</li>
-              <li class="product__option-size_inner">l</li>
-              <li class="product__option-size_inner">xl</li>
-              <li
-                class="
-                  product__option-size_inner
-                  product__option-size_inner_unavailable
-                "
-              >
-                2xl
-              </li>
-            </ul>
+            <fieldset class="size">
+              <p class="size__text product__option-text">Size</p>
+              <ul class="size__list" role="list">
+                <li class="size__list-inner">
+                  <input
+                    id="size-xs"
+                    class="custom-radio custom-radio-size"
+                    type="radio"
+                    name="option"
+                    value="xs"
+                  />
+                  <label for="size-xs">xs</label>
+                </li>
+                <li class="size__list-inner">
+                  <input
+                    id="size-s"
+                    class="custom-radio custom-radio-size"
+                    type="radio"
+                    name="option"
+                    value="s"
+                    checked="checked"
+                  />
+                  <label for="size-s">s</label>
+                </li>
+                <li class="size__list-inner">
+                  <input
+                    id="size-m"
+                    class="custom-radio custom-radio-size"
+                    type="radio"
+                    name="option"
+                    value="m"
+                  />
+                  <label for="size-m">m</label>
+                </li>
+                <li class="size__list-inner">
+                  <input
+                    id="size-l"
+                    class="custom-radio custom-radio-size"
+                    type="radio"
+                    name="option"
+                    value="l"
+                  />
+                  <label for="size-l">l</label>
+                </li>
+                <li class="size__list-inner">
+                  <input
+                    id="size-xl"
+                    class="custom-radio custom-radio-size"
+                    type="radio"
+                    name="option"
+                    value="xl"
+                  />
+                  <label for="size-xl">xl</label>
+                </li>
+                <li class="size__list-inner">
+                  <input
+                    id="size-2xl"
+                    class="custom-radio custom-radio-size"
+                    type="radio"
+                    name="option"
+                    value="2xl"
+                    disabled="disabled"
+                  />
+                  <label for="size-2xl">2xl</label>
+                </li>
+              </ul>
+            </fieldset>
+
+            <!-- PRODUCT OPTION — COLOR -->
+            <fieldset class="color">
+              <div class="color__text product__option-text">
+                <span class="color__text-inner"
+                  >Color -
+                  <span class="color__text-inner_select">White</span>
+                </span>
+              </div>
+              <ul class="color__list" role="list">
+                <li class="color__list-inner">
+                  <input
+                    id="color-white"
+                    class="custom-radio custom-radio-color"
+                    type="radio"
+                    name="option-1"
+                    value="color-white"
+                    checked="checked"
+                  />
+                  <label
+                    class="color-custom-radio color-white"
+                    for="color-white"
+                  >
+                    <span class="color__name">White</span>
+                  </label>
+                </li>
+
+                <li class="color__list-inner">
+                  <input
+                    id="color-Black"
+                    class="custom-radio custom-radio-color"
+                    type="radio"
+                    name="option-1"
+                    value="color-Black"
+                  />
+                  <label
+                    class="color-custom-radio color-black"
+                    for="color-Black"
+                  >
+                    <span class="color__name">Black</span>
+                  </label>
+                </li>
+
+                <li class="color__list-inner">
+                  <input
+                    id="color-gray"
+                    class="custom-radio custom-radio-color"
+                    type="radio"
+                    name="option-1"
+                    value="color-gray"
+                  />
+                  <label class="color-custom-radio color-gray" for="color-gray">
+                    <span class="color__name">Gray</span>
+                  </label>
+                </li>
+
+                <li class="color__list-inner">
+                  <input
+                    id="color-purple"
+                    class="custom-radio custom-radio-color"
+                    type="radio"
+                    name="option-1"
+                    value="color-purple"
+                  />
+                  <label
+                    class="color-custom-radio color-purple"
+                    for="color-purple"
+                  >
+                    <span class="color__name">Purple latte</span>
+                  </label>
+                </li>
+
+                <li class="color__list-inner">
+                  <input
+                    id="color-pink"
+                    class="custom-radio custom-radio-color"
+                    type="radio"
+                    name="option-1"
+                    value="color-pink"
+                  />
+                  <label class="color-custom-radio color-pink" for="color-pink">
+                    <span class="color__name">Pink</span>
+                  </label>
+                </li>
+
+                <li class="color__list-inner">
+                  <input
+                    id="color-orange"
+                    class="custom-radio custom-radio-color"
+                    type="radio"
+                    name="option-1"
+                    value="color-orange"
+                  />
+                  <label
+                    class="color-custom-radio color-orange"
+                    for="color-orange"
+                  >
+                    <span class="color__name">Orange</span>
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+
+            <!-- PRODUCT OPTION — COUNT -->
+            <fieldset class="quantity">
+              <p class="quantity__text product__option-text">Quantity</p>
+
+              <div class="quantity__count">
+                <span class="quantity__count-minus quantity__count-btn"> </span>
+
+                <input
+                  type="text"
+                  class="quantity__count-number quantity__count-btn"
+                  name="quantity"
+                  pattern="[0-9]*"
+                  placeholder="1"
+                />
+                <span class="quantity__count-plus quantity__count-btn"> </span>
+              </div>
+            </fieldset>
+
+            <fieldset class="form-submit">
+              <button type="submit" class="btn-add-card form-btm">
+                add to cart
+              </button>
+              <button type="submit" class="btn-buy-now form-btm">
+                buy it now
+              </button>
+            </fieldset>
           </form>
+          <div class="product__description">
+            <p class="product__description-text">
+              A unisex basic garment with a loose fit. Light and comfortable to
+              your skin.
+            </p>
+            <p class="product__description-text">
+              Certification of cotton - GOTS
+            </p>
+          </div>
         </div>
 
         <div class="product__about">
@@ -139,7 +326,400 @@
           </div>
         </div>
       </section>
+
+      <section class="other-products wrapper">
+        <h2 class="other-products__description">You may also like</h2>
+        <ul class="other-products__inner" role="list">
+          <li class="other-products__list">
+            <a href="#" class="other-products__link">
+              <img
+                src="./img/pic1.jpg"
+                class="other-products__img"
+                alt="women"
+              />
+            </a>
+            <h3 class="other-products__name">Product name</h3>
+            <ul class="other-products__colors">
+              <li class="other-products-inner">
+                <input
+                  id="color-brown"
+                  class="custom-radio custom-radio-xs"
+                  type="radio"
+                  name="option-2"
+                  value="color-brown"
+                />
+                <label
+                  class="color-custom-radio color-brown-xs"
+                  for="color-brown"
+                >
+                  <span class="color__name">Brown</span>
+                </label>
+              </li>
+
+              <li class="other-products-inner">
+                <input
+                  id="color-peach"
+                  class="custom-radio custom-radio-xs"
+                  type="radio"
+                  name="option-2"
+                  value="color-peach"
+                />
+                <label
+                  class="color-custom-radio color-peach-xs"
+                  for="color-peach"
+                >
+                  <span class="color__name">Peach</span>
+                </label>
+              </li>
+
+              <li class="other-products-inner">
+                <input
+                  id="color-pink-xs"
+                  class="custom-radio custom-radio-xs"
+                  type="radio"
+                  name="option-2"
+                  value="color-pink"
+                />
+                <label
+                  class="color-custom-radio color-pink-xs"
+                  for="color-pink-xs"
+                >
+                  <span class="color__name">Pink</span>
+                </label>
+              </li>
+
+              <li class="other-products-inner">
+                <input
+                  id="color-purple-xs"
+                  class="custom-radio custom-radio-xs"
+                  type="radio"
+                  name="option-2"
+                  value="color-pink"
+                />
+                <label
+                  class="color-custom-radio color-purple-xs"
+                  for="color-purple-xs"
+                >
+                  <span class="color__name">Purple</span>
+                </label>
+              </li>
+            </ul>
+            <span class="other-products__chf">chf 40</span>
+          </li>
+
+          <li class="other-products__list">
+            <a href="#" class="other-products__link">
+              <img
+                src="./img/pic2.jpg"
+                class="other-products__img"
+                alt="women"
+              />
+            </a>
+            <h3 class="other-products__name">Product name</h3>
+            <ul class="other-products__colors">
+              <li class="other-products-inner">
+                <input
+                  id="color-brown"
+                  class="custom-radio custom-radio-xs"
+                  type="radio"
+                  name="option-2"
+                  value="color-brown"
+                />
+                <label
+                  class="color-custom-radio color-brown-xs"
+                  for="color-brown"
+                >
+                  <span class="color__name">Brown</span>
+                </label>
+              </li>
+
+              <li class="other-products-inner">
+                <input
+                  id="color-peach"
+                  class="custom-radio custom-radio-xs"
+                  type="radio"
+                  name="option-2"
+                  value="color-peach"
+                />
+                <label
+                  class="color-custom-radio color-peach-xs"
+                  for="color-peach"
+                >
+                  <span class="color__name">Peach</span>
+                </label>
+              </li>
+
+              <li class="other-products-inner">
+                <input
+                  id="color-pink-xs"
+                  class="custom-radio custom-radio-xs"
+                  type="radio"
+                  name="option-2"
+                  value="color-pink"
+                />
+                <label
+                  class="color-custom-radio color-pink-xs"
+                  for="color-pink-xs"
+                >
+                  <span class="color__name">Pink</span>
+                </label>
+              </li>
+
+              <li class="other-products-inner">
+                <input
+                  id="color-purple-xs"
+                  class="custom-radio custom-radio-xs"
+                  type="radio"
+                  name="option-2"
+                  value="color-pink"
+                />
+                <label
+                  class="color-custom-radio color-purple-xs"
+                  for="color-purple-xs"
+                >
+                  <span class="color__name">Purple</span>
+                </label>
+              </li>
+            </ul>
+            <span class="other-products__chf">chf 40</span>
+          </li>
+
+          <li class="other-products__list">
+            <a href="#" class="other-products__link">
+              <img
+                src="./img/pic3.jpg"
+                class="other-products__img"
+                alt="women"
+              />
+            </a>
+            <h3 class="other-products__name">Product name</h3>
+            <ul class="other-products__colors">
+              <li class="other-products-inner">
+                <input
+                  id="color-brown"
+                  class="custom-radio custom-radio-xs"
+                  type="radio"
+                  name="option-2"
+                  value="color-brown"
+                />
+                <label
+                  class="color-custom-radio color-brown-xs"
+                  for="color-brown"
+                >
+                  <span class="color__name">Brown</span>
+                </label>
+              </li>
+
+              <li class="other-products-inner">
+                <input
+                  id="color-peach"
+                  class="custom-radio custom-radio-xs"
+                  type="radio"
+                  name="option-2"
+                  value="color-peach"
+                />
+                <label
+                  class="color-custom-radio color-peach-xs"
+                  for="color-peach"
+                >
+                  <span class="color__name">Peach</span>
+                </label>
+              </li>
+
+              <li class="other-products-inner">
+                <input
+                  id="color-pink-xs"
+                  class="custom-radio custom-radio-xs"
+                  type="radio"
+                  name="option-2"
+                  value="color-pink"
+                />
+                <label
+                  class="color-custom-radio color-pink-xs"
+                  for="color-pink-xs"
+                >
+                  <span class="color__name">Pink</span>
+                </label>
+              </li>
+
+              <li class="other-products-inner">
+                <input
+                  id="color-purple-xs"
+                  class="custom-radio custom-radio-xs"
+                  type="radio"
+                  name="option-2"
+                  value="color-pink"
+                />
+                <label
+                  class="color-custom-radio color-purple-xs"
+                  for="color-purple-xs"
+                >
+                  <span class="color__name">Purple</span>
+                </label>
+              </li>
+            </ul>
+            <span class="other-products__chf">chf 40</span>
+          </li>
+
+          <li class="other-products__list">
+            <a href="#" class="other-products__link">
+              <img
+                src="./img/pic4.jpg"
+                class="other-products__img"
+                alt="women"
+              />
+            </a>
+            <h3 class="other-products__name">Product name</h3>
+            <ul class="other-products__colors">
+              <li class="other-products-inner">
+                <input
+                  id="color-brown"
+                  class="custom-radio custom-radio-xs"
+                  type="radio"
+                  name="option-2"
+                  value="color-brown"
+                />
+                <label
+                  class="color-custom-radio color-brown-xs"
+                  for="color-brown"
+                >
+                  <span class="color__name">Brown</span>
+                </label>
+              </li>
+
+              <li class="other-products-inner">
+                <input
+                  id="color-peach"
+                  class="custom-radio custom-radio-xs"
+                  type="radio"
+                  name="option-2"
+                  value="color-peach"
+                />
+                <label
+                  class="color-custom-radio color-peach-xs"
+                  for="color-peach"
+                >
+                  <span class="color__name">Peach</span>
+                </label>
+              </li>
+
+              <li class="other-products-inner">
+                <input
+                  id="color-pink-xs"
+                  class="custom-radio custom-radio-xs"
+                  type="radio"
+                  name="option-2"
+                  value="color-pink"
+                />
+                <label
+                  class="color-custom-radio color-pink-xs"
+                  for="color-pink-xs"
+                >
+                  <span class="color__name">Pink</span>
+                </label>
+              </li>
+
+              <li class="other-products-inner">
+                <input
+                  id="color-purple-xs"
+                  class="custom-radio custom-radio-xs"
+                  type="radio"
+                  name="option-2"
+                  value="color-pink"
+                />
+                <label
+                  class="color-custom-radio color-purple-xs"
+                  for="color-purple-xs"
+                >
+                  <span class="color__name">Purple</span>
+                </label>
+              </li>
+            </ul>
+            <span class="other-products__chf">chf 40</span>
+          </li>
+        </ul>
+      </section>
+
+      <footer class="footer">
+        <div class="footer__inner footer-wrapper">
+          <div class="footer-about">
+            <p class="footer-description">About</p>
+            <ul class="footer-about__list" role="list">
+              <li class="footer-about__list-inner">
+                <a class="footer-link" href="#">Susparsa Store</a>
+              </li>
+              <li class="footer-about__list-inner">
+                <a class="footer-link" href="#">Geneva, Switzerland</a>
+              </li>
+
+              <div class="footer-social">
+                <li class="footer-social__inner">
+                  <a href="#" class="footer-link">
+                    <img src="./img/icons/facebook.svg" alt="" />
+                  </a>
+                </li>
+
+                <li class="footer-social__inner">
+                  <a href="#" class="footer-link">
+                    <img src="./img/icons/Instagram.svg" alt="" />
+                  </a>
+                </li>
+              </div>
+            </ul>
+          </div>
+
+          <div class="footer-company">
+            <p class="footer-description">Company</p>
+            <ul class="footer-about__list" role="list">
+              <li class="footer-about__list-inner">
+                <a class="footer-link" href="#">Women</a>
+              </li>
+              <li class="footer-about__list-inner">
+                <a class="footer-link" href="#">Men</a>
+              </li>
+              <li class="footer-about__list-inner">
+                <a class="footer-link" href="#">Kids</a>
+              </li>
+              <li class="footer-about__list-inner">
+                <a class="footer-link" href="#">About Us</a>
+              </li>
+              <li class="footer-about__list-inner">
+                <a class="footer-link" href="#">Our Materials</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-useful">
+            <p class="footer-description">Useful Links</p>
+            <ul class="footer-about__list" role="list">
+              <li class="footer-about__list-inner">
+                <a class="footer-link" href="#">Privacy Policy</a>
+              </li>
+              <li class="footer-about__list-inner">
+                <a class="footer-link" href="#">Shipping Policy</a>
+              </li>
+              <li class="footer-about__list-inner">
+                <a class="footer-link" href="#">Return & Refund Policy</a>
+              </li>
+              <li class="footer-about__list-inner">
+                <a class="footer-link" href="#">Terms of Service</a>
+              </li>
+              <li class="footer-about__list-inner">
+                <a class="footer-link" href="#">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <p class="footer-copyright footer-wrapper">© Susparsa 2021</p>
+      </footer>
     </div>
+
+    <section class="popup image-popup">
+      <div class="popup__container-image">
+        <img class="image-popup__photo" src="#" alt="#" />
+      </div>
+    </section>
+
     <script src="./js/index.js"></script>
   </body>
 </html>

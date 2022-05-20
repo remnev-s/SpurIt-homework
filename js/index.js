@@ -1,33 +1,19 @@
-const image = document.querySelector('.product__images-main');
-const popupImg = document.querySelector('.image-popup');
+const num = document.querySelector('.quantity__count-number');
+const decriment = document.querySelector('.quantity__count-minus');
+const increment = document.querySelector('.quantity__count-plus');
 
-const photo = document.querySelector('.image-popup__photo');
-const popup = document.querySelector('.popup');
+let number = 1;
 
-image.addEventListener('click', () => {
-  photo.src = image.src;
-  // console.log(photo);
-  openPopup(popupImg);
-});
-
-const openPopup = (popups) => {
-  popups.classList.add('popup_opened');
-  window.addEventListener('keydown', closeByEscape);
+const countIncrement = () => {
+  number++;
+  num.placeholder = number;
 };
-const closePopup = (popups) => {
-  popups.classList.remove('popup_opened');
-  window.removeEventListener('keydown', closeByEscape);
-};
-
-const closeByEscape = (evt) => {
-  if (evt.key === 'Escape') {
-    const openedPopup = document.querySelector('.popup_opened');
-    closePopup(openedPopup);
+const countDecriment = () => {
+  if (number > 1) {
+    number--;
+    num.placeholder = number;
   }
 };
 
-popup.addEventListener('mousedown', (evt) => {
-  if (evt.target.classList.contains('popup_opened')) {
-    closePopup(popup);
-  }
-});
+decriment.addEventListener('click', countDecriment);
+increment.addEventListener('click', countIncrement);

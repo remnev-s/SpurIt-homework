@@ -57,7 +57,7 @@ html {
   letter-spacing: 0.1rem;
 }
 
-.menu__list-item:not(:last-child) {
+.menu__item:not(:last-child) {
   margin-right: 3.5rem;
 }
 
@@ -234,16 +234,17 @@ input[type='radio']:disabled + label {
   margin-bottom: 4rem;
 }
 .quantity__count {
-  /* border: 1px solid red; */
   border: 1px solid #ccc;
   max-width: 12rem;
+  display: flex;
 }
 .quantity__count-btn {
   background-repeat: no-repeat;
   background-position: center center;
-  /* border: 1px solid #ccc; */
-  padding: 11px 19px;
+  padding: 11px 20px;
   cursor: pointer;
+  border: none;
+  background-color: transparent;
 }
 .quantity__count-number {
   max-width: 39px;
@@ -259,10 +260,12 @@ input[type='radio']:disabled + label {
 
 .quantity__count-plus {
   background-image: url(../img/count-plus.svg);
+  font-size: 0;
 }
 
 .quantity__count-minus {
   background-image: url(../img/minus.svg);
+  font-size: 0;
 }
 
 /* PRODUCT OPTION — BUTTON */
